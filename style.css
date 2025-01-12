@@ -1,0 +1,99 @@
+.source-sans-3-font {
+    font-family: "Source Sans 3", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.montserrat-font {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+body,
+html {
+    margin: 0;
+}
+
+nav {
+    height: 8vh;
+    width: 100vw;
+    display: flex;
+    background-color: whitesmoke;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+p {
+    font-family: "Source Sans 3";
+}
+
+.navbar-brand {
+    display: flex;
+    justify-content: start;
+}
+
+.pages {
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+    padding-right: 16px;
+}
+
+.navButton {
+    padding: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Montserrat", serif;
+    color: black;
+}
+
+.logo {
+    height: 4vh;
+    padding-left: 16px;
+}
+
+.welcome-section {
+    height: 92vh;
+    width: 100vw;
+    padding-top: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.welcome-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("src/index-wallpaper.png");
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.sectionTitle {
+    font-family: "Montserrat";
+    font-size: 32px;
+}
+
+.sectionText {
+    padding-left: 16vw;
+    padding-right: 16vw;
+}
+
+.img2025 {
+    height: 12vh;
+    padding: 0;
+    margin: 0;
+}
