@@ -12,9 +12,31 @@
     font-style: normal;
 }
 
+.lora-font {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.delius-regular {
+    font-family: "Delius", serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
 body,
 html {
     margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat";
 }
 
 nav {
@@ -31,6 +53,13 @@ nav {
 
 p {
     font-family: "Source Sans 3";
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
 }
 
 .navbar-brand {
@@ -58,7 +87,7 @@ p {
     padding-left: 16px;
 }
 
-.welcome-section {
+.section {
     height: 92vh;
     width: 100vw;
     padding-top: 8vh;
@@ -69,25 +98,28 @@ p {
     position: relative;
 }
 
-.welcome-section::before {
+.section::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("src/index-wallpaper.png");
+    background-image: url("img/index-wallpaper.png");
     background-size: cover;
     opacity: 0.3;
     z-index: -1;
 }
 
 .sectionTitle {
-    font-family: "Montserrat";
-    font-size: 32px;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    align-items: center;
 }
 
 .sectionText {
+    font-size: 20px;
     padding-left: 16vw;
     padding-right: 16vw;
 }
@@ -96,4 +128,567 @@ p {
     height: 12vh;
     padding: 0;
     margin: 0;
+}
+
+.products-link {
+    color: white;
+    padding: 8;
+    border-radius: 12px;
+    background-color: black;
+    text-decoration: none;
+    font-family: "Montserrat";
+    position: relative;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.products-link:hover {
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    color: black;
+}
+
+.products-title {
+    padding-top: 2vh;
+    font-size: 20px;
+}
+
+.products-section {
+    margin: 40px;
+    padding-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.products-display {
+    display: flex;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+    gap: 2vw;
+}
+
+.products-card {
+    width: 25%;
+    padding: 20px;
+    position: relative;
+    background-color: white;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.products-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.10);
+    z-index: 10;
+}
+
+.products-image {
+    height: 50%;
+    width: 100%;
+    object-fit: contain;
+    padding-bottom: 16px;
+}
+
+.products-name {
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 2vmin;
+    height: 5vh;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.products-name:hover {
+    color: grey;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.products-info {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2vmin;
+}
+
+.products-price {
+    color: grey;
+}
+
+.shopping-cart {
+    display: flex;
+    position: sticky;
+    bottom: 40px;
+    right: 40px;
+    margin-left: auto;
+    width: clamp(50px, 5vw, 100px);
+    height: clamp(50px, 5vw, 100px);
+    z-index: 10000;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 100px;
+    background-color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    padding: 4;
+    transition: box-shadow 0.3s ease;
+}
+
+.shopping-cart:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.shopping-cart-icon {
+    object-fit: contain;
+    height: clamp(24px, 3vw, 32px);
+}
+
+.item-amount-handler {
+    color: black;
+    font-size: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    background-color: rgb(192, 192, 192);
+    height: clamp(20px, 2.5vw, 30px);
+    width: clamp(20px, 2.5vw, 30px);
+    border-radius: 100px;
+}
+
+.checkout-section {
+    padding-top: 8vh;
+    margin: 40px;
+    height: 140vh;
+}
+
+.checkout-table-div {
+    padding-bottom: 30px;
+}
+
+.checkout-table {
+    width: 100%;
+    height: 30%;
+    background-color: whitesmoke;
+    font-family: "Source Sans 3";
+    font-size: 100%;
+    border: 2px solid rgb(214, 214, 214);
+}
+
+th {
+    justify-content: start;
+}
+
+td {
+    padding: 8px;
+}
+
+.td-content-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+.checkout-image {
+    height: 100%;
+    width: clamp(4%, 5vw, 16%);
+}
+
+.item-title-div {
+    display: flex;
+    justify-content: start;
+    padding-left: 20;
+}
+
+.products-payment-main {
+    width: 100%;
+    height: 60%;
+}
+
+.products-payment-div {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border: 2px solid rgb(214, 214, 214);
+    padding: 16px;
+    gap: 16px;
+    width: 100%;
+}
+
+.products-payment-input {
+    display: flex;
+    gap: 16px;
+    padding: 4px;
+    width: 100%;
+}
+
+.products-payment-input-name {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+input {
+    border: 1px solid rgb(214, 214, 214);
+    width: 100%;
+}
+
+.products-payment-main {
+    display: flex;
+    gap: 16px;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.order-summary {
+    background-color: rgb(236, 236, 188);
+    border: solid 2px rgb(187, 187, 106);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    height: 100%;
+}
+
+.order-summary-text {
+    color: rgb(68, 68, 16);
+}
+
+hr {
+    border: 1px dotted rgb(187, 187, 106);
+}
+
+.order-summary-subtotal-price {
+    display: flex;
+}
+
+.order-summary-subtotal-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-method {
+    background-color: whitesmoke;
+    border: 2px solid rgb(214, 214, 214);
+    padding: 16px;
+}
+
+.payment-method-p {
+    font-size: 20;
+    font-weight: light;
+    margin: 0;
+    padding: 0;
+}
+
+.payment-method-button-handler {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment-method-button {
+    height: 100;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgb(214, 214, 214);
+    background-color: whitesmoke;
+    transition: background-color 0.3s ease;
+}
+
+.payment-method-button:hover {
+    background-color: rgb(219, 219, 219);
+}
+
+.payment-method-button-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.payment-method-p-s {
+    margin: 0;
+}
+
+.credit-card-logos {
+    display: flex;
+}
+
+.credit-card-logo {
+    height: 24;
+    width: auto;
+    padding: 6px;
+}
+
+.credit-card-logo-2 {
+    height: 32;
+    width: auto;
+    padding: 6px;
+}
+
+.account-section {
+    padding-top: 24vh;
+    margin: 40px;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.login-window {
+    background-color: whitesmoke;
+    height: 280px;
+    width: 400px
+}
+
+.login-title {
+    padding-left: 24px;
+}
+
+.login-input-holder {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 30%;
+}
+
+.login-input {
+    font-family: "Source Sans 3";
+    border: 1px rgb(209, 209, 209) solid;
+    background-color: whitesmoke;
+    height: 100%;
+    transition: transform 0.2s ease;
+}
+
+.login-input:focus {
+    transform: scale(1.01);
+    outline: 1px solid rgb(0, 0, 0);
+}
+
+.login-button-handler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-button {
+    border: none;
+    background-color: black;
+    color: whitesmoke;
+    padding: 8px;
+    border-radius: 4px;
+    width: 30%;
+    font-family: "Montserrat";
+    transition: transform 0.2s ease;
+}
+
+.login-button:hover {
+    transform: scale(1.05);
+}
+
+.about-body {
+    background-color: whitesmoke;
+}
+
+.about-section {
+    padding-top: 8vh;
+    margin: 40px;
+    height: auto;
+    background-color: whitesmoke;
+}
+
+.title-handler {
+    height: 24%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.h1-about {
+    font-family: "Lato";
+    font-size: clamp(1rem, 0.5 * min(24vh, 100vw), 10vw);
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.about-u {
+    text-decoration: underline;
+    text-decoration-thickness: 1vh;
+    text-underline-offset: 16px;
+}
+
+.about-info-handler {
+    display: flex;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+
+.about-info-text-handler {
+    padding: 12px;
+    height: 100%;
+    width: 50%;
+    background-color: whitesmoke;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+.about-info-text {
+    font-family: "Delius";
+    line-height: 1.6;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.about-anchor {
+    color: rgb(151, 131, 106);
+}
+
+.design-handler {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 40;
+    padding: 12px;
+}
+
+.design-handler img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: invert();
+}
+
+.custom-blinkees-section {
+    padding-top: 8vh;
+    margin: 40px;
+    height: auto;
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: auto;
+    align-items: center
+}
+
+.rating-title {
+    text-align: center;
+}
+
+.rating-img {
+    width: 20%;
+    padding-bottom: 8px;
+}
+
+.rating-a {
+    color: black;
+    text-decoration: none;
+    font-family: "Source Sans 3";
+    transition: transform 0.2s ease;
+}
+
+.rating-a:hover {
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+
+.custom-img-showcase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.custom-img {
+    width: 25%;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.custom-img:hover {
+    transform: scale(1.05);
+}
+
+.custom-pin {
+    display: flex;
+    width: 100%;
+    height: 30%;
+    padding-bottom: 20px;
+}
+
+.custom-pin-text {
+    width: 50%;
+    height: 100%;
+}
+
+.custom-pin-box {
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-pin-row {
+    display: flex;
+    width: 100%;
+    object-fit: contain;
+    height: 50%;
+}
+
+.custom-pin-row-img {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.custom-pin-row-img:hover {
+    transform: scale(1.05);
+}
+
+.custom-pin-row-text {
+    display: flex;
+}
+
+.button-handler {
+    display: flex;
+    justify-content: center;
+}
+
+.custom-blinkees-button {
+    border: none;
+    background-color: black;
+    color: whitesmoke;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.custom-blinkees-button:hover {
+    transform: scale(1.05);
+    background-color: burlywood;
+    color: black;
+}
+
+.level-1 {
+    font-family: "Source Sans 3";
+    font-weight: bold;
+    list-style-image: url("img/Vector Shapes/SVG/Fichier 9.svg");
+}
+
+.level-1 ul {
+    font-family: "Source Sans 3";
+    font-weight: normal;
+    list-style-image: url("img/Vector Shapes/SVG/Fichier 27.svg");
 }
