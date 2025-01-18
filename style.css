@@ -573,6 +573,8 @@ hr {
 }
 
 .rating {
+    padding-top: 124px;
+    padding-bottom: 36px;
     display: flex;
     flex-direction: column;
     justify-content: center;
